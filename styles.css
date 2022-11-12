@@ -1,0 +1,174 @@
+:root {
+    --color-yellow:#F7A20C;
+    --color-brown:#863104;
+    --color-white: #fff;
+    --color-orange: #F7461B;
+    --color-black: #000;
+    --color-gray: #242224;
+    --color-purple: #784D75;
+    --box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.336);
+    --select-theme-btn-width: 20px;
+    --select-theme-btn-height: 20px;
+    --select-theme-btn-border-radius: 50px;
+    --select-theme-btn-display: block;
+    --select-theme-btn-margin: 5px auto;
+    
+}
+
+
+
+fieldset {
+    width: 70vw;
+    display: flex;
+    margin: 50px auto;
+    justify-content: center;
+    border: 0px;
+    padding: 20px;
+
+}
+
+.yellow{
+    --bg-color-calculator: var(--color-yellow);
+    --btn-color: var(--color-brown);
+    --font-color: var(--color-white);
+}
+
+.light{
+    --bg-color: #ccc;
+    --bg-color-calculator: var(--color-white);
+    --btn-color:var(--color-orange);
+    --font-color: var(--color-black);
+}
+
+.dark{
+    --bg-color: var(--color-gray);
+    --bg-color-calculator: var(--color-black);
+    --btn-color: var(--color-purple);
+    --font-color: var(--color-white);
+}
+
+.select-theme {
+    display: flex;
+    justify-content: flex-end;
+    background: none;
+    border: none;
+    margin: 5px;
+}
+
+.select-theme>button.yellow, #themes>button.yellow {
+    display: var(--select-theme-btn-display);
+    background-color: var(--color-yellow);
+    width: var(--select-theme-btn-width);
+    height: var(--select-theme-btn-height);
+    border-radius: var(--select-theme-btn-border-radius);
+    cursor: pointer;
+}
+
+.select-theme>button.light, #themes>button.light {
+    display: var(--select-theme-btn-display);
+    background-color: var(--color-white);
+    width: var(--select-theme-btn-width);
+    height: var(--select-theme-btn-height);
+    border-radius: var(--select-theme-btn-border-radius);
+    cursor: pointer;
+}
+
+.select-theme>button.dark, #themes>button.dark {
+    display: var(--select-theme-btn-display);
+    background-color: var(--color-black);
+    width: var(--select-theme-btn-width);
+    height: var(--select-theme-btn-height);
+    border-radius: var(--select-theme-btn-border-radius);
+    cursor: pointer;
+    border-color: var(--color-white);
+}
+
+#themes>button {
+    margin: var(--select-theme-btn-margin);
+}
+
+#themes {
+    display: none;
+    width: 30px;
+    background-color: #ccc;
+    border-radius: 25px;
+    position: fixed;
+}
+
+table {
+    background-color: var(--bg-color-calculator);
+    padding: 20px;
+    border-radius: 15px;
+    height: 70vh;
+    width: 25vw;
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+thead th>hr {
+    color: var(--font-color);
+    box-shadow: none;
+}
+
+thead th>input {
+    height: 35px;
+    width: 100%;
+}
+
+thead th input {
+    border: none;
+    background: none;
+}
+
+tbody td button {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    border: none;
+    background: none;
+    font-family: cursive;
+    color: var(--font-color);
+    font-size: 1.5em;
+}
+
+tbody td button:hover {
+    background-color: var(--font-color);
+    color: var(--btn-color);
+}
+
+.last-column>button {
+    color: var(--btn-color);
+    font-weight: bold;
+    text-align: center;
+}
+
+.last-column>button:hover {
+    background-color: var(--btn-color);
+    color: var(--font-color);
+}
+
+.equal-value>button {
+    color: var(--font-color);
+    background-color: var(--btn-color);
+    box-shadow: var(--box-shadow);
+}
+
+.equal-value>button:hover {
+    color: var(--btn-color);
+    background-color: var(--font-color);
+    box-shadow: var(--box-shadow);
+}
+
+.screen>input {
+    text-align: right;
+    font-family: cursive;
+    font-size: 2.5em;
+    color: var(--font-color);
+}
+
+.little-screen>input {
+    text-align: right;
+    font-family: cursive;
+    font-size: 1em;
+    color: var(--font-color);
+}

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <section>
+
+        <div class="select-theme">
+            <button class="yellow" onclick="selectTheme()" id="selectedTheme"></button>
+            <div id="themes">
+                <button onclick="themeChanger('yellow')" value="yellow" class="yellow"></button>
+                <button onclick="themeChanger('light')" value="light" class="light"></button>
+                <button onclick="themeChanger('dark')" value="dark" class="dark"></button>
+            </div>
+        </div>
+        <fieldset id="fieldset" class="yellow">
+            <div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th colspan="4" class="little-screen">
+                                <input type="text" name="operations" id="operations" disabled >
+                            </th>
+                        </tr>
+                        <tr>
+                            <th colspan="4" class="screen">
+                                <input type="text" name="main-screen" id="main-screen" disabled>
+                                <hr>
+                            </th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td><button id="c" onclick="clean()" value="c"><b>C</b></button></td>
+                            <td><button id="plusLess" onclick="changeSignal()" value="+/-"><b>+/-</b></button></td>
+                            <td><button id="percent" onclick="percent()" value="%"><b>%</b></button></td>
+                            <td class="last-column"><button id="divider" onclick="valueSelected(this.value)" value="/">/</button></td>
+                        </tr>
+                        <tr>
+                            <td><button onclick="valueSelected(this.value)" value=1>1</button></td>
+                            <td><button onclick="valueSelected(this.value)" value=2>2</button></td>
+                            <td><button onclick="valueSelected(this.value)" value=3>3</button></td>
+                            <td class="last-column"><button onclick="valueSelected(this.value)" value="*">X</button></td>
+                        </tr>
+                        <tr>
+                            <td><button onclick="valueSelected(this.value)" value=4>4</button></td>
+                            <td><button onclick="valueSelected(this.value)" value=5>5</button></td>
+                            <td><button onclick="valueSelected(this.value)" value=6>6</button></td>
+                            <td class="last-column"><button onclick="valueSelected(this.value)" value="-">-</button></td>
+                        </tr>
+                        <tr>
+                            <td><button onclick="valueSelected(this.value)" value=7>7</button></td>
+                            <td><button onclick="valueSelected(this.value)" value=8>8</button></td>
+                            <td><button onclick="valueSelected(this.value)" value=9>9</button></td>
+                            <td class="last-column"><button onclick="valueSelected(this.value)" value="+">+</button></td>
+                        </tr>
+                        <tr>
+                            <td><button onclick="valueSelected(this.value)" value=00>00</button></td>
+                            <td><button onclick="valueSelected(this.value)" value=0>0</button></td>
+                            <td><button onclick="valueSelected(this.value)" value=".">,</button></td>
+                            <td class="last-column equal-value"><button onclick="operation()" value="=">=</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </fieldset>
+    </section>
+
+</body>
+
+<script src="./scripts.js"></script>
+
+</html>
